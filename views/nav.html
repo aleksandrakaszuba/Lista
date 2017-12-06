@@ -1,0 +1,21 @@
+  <div class="navbar-header">
+  <div class="navbar-brand">
+  <a ng-href="#/" class="h3">Lista</a>  <i class="h5">|  AngularJS - CCPS530 Project</i></div>
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+  </div>
+
+  <div id="main-nav" class="collapse navbar-collapse">
+  <ul class="nav navbar-nav navbar-right ">
+    <li><a ng-show="currentUser" ng-href="#/mylists">My Lists
+      <span ng-show="numberOfLists" class="badge">{{numberOfLists}}</span></a></li>
+    <li><a ng-hide="currentUser" ng-href="#/login">Login</a></li>
+    <li><a ng-hide="currentUser" ng-href="#/register">Register</a></li>
+  </ul>
+  </div>
+
+ 

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="UTF-8">
+    <title>AngularJs To-Do Lists</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    
+    <!--   <link rel="stylesheet" href="css/style.css">
+    -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/customstyle.css">
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/lib/angular/angular-route.min.js"></script>
+    <script src="js/lib/angular/angular-animate.min.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyD4mOhGLmAIXEQ0XafHBmRtkG3xy0PEB5U",
+    authDomain: "webo-3c0e8.firebaseapp.com",
+    databaseURL: "https://webo-3c0e8.firebaseio.com",
+    projectId: "webo-3c0e8",
+    storageBucket: "webo-3c0e8.appspot.com",
+    messagingSenderId: "40278950248"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.1.0/angularfire.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services/authentication.js"></script>
+    <script src="js/controllers/registration.js"></script>
+    <script src="js/controllers/mylists.js"></script>
+    <script src="js/controllers/items.js"></script>
+  </head>
+  <body>
+    <header id="topnav">
+    <nav class="navbar navbar-default" ng-include="'views/nav.html'"></nav>
+  </header>  
+  <div  id="welcomeUser" ng-include="'views/welcomeuser.html'"></div>
+
+  <div class="container">
+  <main ng-view> </main>
+</div>
+</body>
+</html>

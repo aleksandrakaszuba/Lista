@@ -1,0 +1,58 @@
+<div class="box">
+  
+  <section>
+    <form class="form-inline" name="myform"  ng-submit="addItem()" novalidate>
+      <div>
+        <h1>{{listname}}</h1>
+        <p>Add new items to your list</p>
+      </div>
+      <div class="form-group">
+        <input type="text" name="todoitem" placeholder="Item" class="form-control"
+        ng-model="todoitem" ng-required="true">
+        <p class="error validationerror"
+          ng-show="myform.firstname.$invalid && myform.firstname.$touched">
+        Item required</p>
+      </div>
+      <button type="submit" class="btn btn-primary" ng-disabled="myform.$invalid">Add to list</button>
+    </form>
+  </section>
+  <hr>
+  <div class="row">
+    
+    <div class="col-xs-12 col-md-6"  >
+      <h2>To-Do:</h2>
+      <div  class=" ">
+        <div ng-repeat="(key,todo) in todos" class="list-elements list-unstyled">
+          <div class="col-xs-8">
+            <span class="">{{$index+1}}.</span> <span class="h5">{{ todo.item }}  </span>
+          </div>
+          <div class="col-xs-4">
+            <a  class=""  ng-click="completeItem(key)">
+              <span><i class="fa fa-check" aria-hidden="true"></i> Complete</span></a>
+              <a  ng-click = "deleteItem(key)" class=""><span><i class="fa fa-times" aria-hidden="true"></i> Delete</span></a>
+            </div>
+          </div>
+          
+        </div>
+        <div ng-if="todos==0" class="emptyMessage">Nothing to do</div>
+      </div>
+      
+      <div class="col-xs-12 col-md-6"  >
+        <h2>Done:</h2>
+        <div  class=" ">
+          <div ng-repeat="(key,done) in dones" class="list-elements list-unstyled">
+            <div class="col-xs-8">
+              <span class="">{{$index+1}}.</span> <span class="h5">{{ done.item }}  </span>
+            </div>
+            
+            <div class="col-xs-4">
+              <a  class=""  ng-click="uncompleteItem(key)">
+                <span><i class="fa fa-angle-left" aria-hidden="true"></i> Move back</span></a>
+                <a  ng-click = "deleteDonesItem(key)" class=""><span><i class="fa fa-times" aria-hidden="true"></i> Delete</span></a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>

@@ -1,0 +1,92 @@
+
+html{
+ background: #f7f7f7;
+ height: 100%;
+}
+body{
+	background: transparent;
+}
+.navbar{
+	margin-bottom:0; 
+}
+.navbar-default{
+ border-radius:0px; 
+ background: #ff7964;
+ border-color: #ff7964;
+ color: #eee;
+}
+.navbar-default a, .navbar-default i,.navbar-default .navbar-nav>li>a {
+	color: white;
+}
+.navbar-default .navbar-toggle .icon-bar{
+	background: white;
+}
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #ff7964;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a{
+	    cursor: pointer;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #ffefed;
+    background-color: transparent;
+
+}
+.header-section{
+ 
+}
+#welcomeUser{
+	margin: 20px 0;
+	display: block;
+}
+.box{
+	background: white;
+	overflow: auto;
+	padding: 30px 40px;
+}
+.form-control{
+	border: 0;
+	border-bottom: 1px solid #222;
+	box-shadow: none;
+	border-radius:0;  
+}
+.form-control:focus{
+	box-shadow: none;
+	border-bottom:1px solid #66afe9; 
+}
+.list-elements{
+    background: #ece6e6;
+    background: #f1f1f1;
+   // border-bottom: 5px solid #ffffff;
+    margin: 8px 0;
+    padding: 15px 5px;
+/*    border-radius:5px;*/
+    overflow: auto; 
+}
+.btn{
+	border-radius:0; 
+}
+.list-elements:last-child{
+	border: 0;
+}
+.list-elements span{
+	color: #777;
+}
+
+.extraMsg{
+margin: 20px 0;
+}
+input.ng-invalid.ng-touched {
+  border-bottom: 2px solid #DA3637;
+}
+
+input.ng-valid.ng-touched {
+  border-bottom: 2px solid #509D12;
+}
+.error {
+  color: red;
+  padding-bottom: 10px;
+}

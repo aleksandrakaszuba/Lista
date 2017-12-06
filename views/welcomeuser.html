@@ -1,0 +1,5 @@
+<div class="userinfo container" ng-show="currentUser" ng-controller="RegistrationController">
+	<span class="h3">Hi {{currentUser.firstname}}!</span>
+	<small>(Not you?
+	<a ng-href="#/login" ng-click="logout()">logout</a>)</small>
+</div>

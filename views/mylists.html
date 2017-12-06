@@ -1,0 +1,47 @@
+<div class="box">
+  <h1>Your Lists</h1>
+
+<header class="row">
+
+
+<div class="col-sm-4 pull-right  ">
+  <form class="form-inline addMyList "
+    name="myform" ng-submit="addMyList()"  novalidate class="">
+    <div class="form-group ">
+      <input type="text" name="todolistname" placeholder="List name"
+      ng-model="todolistname" ng-required="true" class="form-control pull-right">
+    </div>
+    <button type="submit" class="btn btn-primary pull-right"
+    ng-disabled="myform.$invalid">Add list</button>
+  </form>
+</div>
+</header>
+<hr>
+<div class="row">
+  <div class="col-xs-12 col-sm-4" ng-if="todolists!=0"><input type="text" ng-if="todolists" ng-model="searchText" class="form-control" placeholder="Search list">
+</div>
+</div>
+
+ 
+<div class="todolist" ng-repeat="(key, todolist) in todolists | filter:searchText" >
+
+  <div class="list-elements list-unstyled">
+    <div class="col-xs-8">
+      <span class="">{{$index+1}}.</span>
+      <a  ng-href="#/todo/{{currentUser.regUser}}/{{todolist.$id}}"><span class="h5">{{todolist.name}}</span></a>
+    </div>
+    <div class="actions col-xs-4 ">
+      
+      <a class=" pull-right" ng-click="deleteMyList(key)">
+        <span> <i class="fa fa-trash" aria-hidden="true"></i> Delete</span>
+      </a>
+      <a class=" pull-right "
+        ng-href="#/todo/{{currentUser.regUser}}/{{todolist.$id}}">
+        <span><i class="fa fa-eye" aria-hidden="true"></i> View </span>
+      </a>
+    </div>
+  </div>
+
+</div>
+  <div ng-if="todolists==0" class="extraMsg">You have no lists!</div>
+</div>
