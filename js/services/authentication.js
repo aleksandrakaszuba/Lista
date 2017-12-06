@@ -25,7 +25,7 @@ myApp.factory('Authentication',
         user.email,
         user.password
       ).then(function(user) {
-        $location.path('/todolists');
+        $location.path('/mylists');
       }).catch(function(error) {
         $rootScope.message = error.message;
       }); //signInWithEmailAndPassword

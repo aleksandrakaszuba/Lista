@@ -17,12 +17,9 @@
 </div>
 </header>
 <hr>
-<div class="row">
-  <div class="col-xs-12 col-sm-4" ng-if="todolists!=0"><input type="text" ng-if="todolists" ng-model="searchText" class="form-control" placeholder="Search list">
-</div>
-</div>
-
  
+
+ <input type="text"   ng-model="searchText" class="form-control" placeholder="Search list">
 <div class="todolist" ng-repeat="(key, todolist) in todolists | filter:searchText" >
 
   <div class="list-elements list-unstyled">
